@@ -1,0 +1,10 @@
+﻿<h2>Clicking through the tabs wil not reload the sticky tab states</h2>
+<ul class="tabs">
+    <li><a ui-sref-active="active" ui-sref="details({id: $state.params.id})">Details</a></li>
+    <li><a ui-sref-active="active" ui-sref="settings({id: $state.params.id})">Settings</a></li>
+    <li><a ui-sref-active="active" ui-sref="info({id: $state.params.id})">Info</a></li>
+</ul>
+
+<div ui-view="details" ng-show="'details' | includedByState"></div>
+<div ui-view="info" ng-show="'info' | includedByState"></div>
+<div ui-view="settings" ng-show="'settings' | includedByState"></div>

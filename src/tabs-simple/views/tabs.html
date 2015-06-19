@@ -1,0 +1,12 @@
+﻿<h2>Clicking through the tabs wil not reload the sticky tab states</h2>
+<div>parent controller fires only once, random generated number in parent constructor {{ctrl.random}}</div>
+
+<ul class="tabs">
+    <li><a ui-sref-active="active" ui-sref="details">Details</a></li>
+    <li><a ui-sref-active="active" ui-sref="settings">Settings</a></li>
+    <li><a ui-sref-active="active" ui-sref="info">Info</a></li>
+</ul>
+
+<div ui-view="details" ng-show="'details' | includedByState"></div>
+<div ui-view="info" ng-show="'info' | includedByState"></div>
+<div ui-view="settings" ng-show="'settings' | includedByState"></div>

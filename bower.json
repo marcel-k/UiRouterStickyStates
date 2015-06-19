@@ -1,0 +1,32 @@
+{
+  "name": "UIRouterExtrasExample",
+  "version": "0.0.1",
+  "authors": [
+    "marcel-k"
+  ],
+  "description": "Example for using ui router extras",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "ui-router",
+    "ui-router-extras",
+    "sticky-states"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/marcel-k",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ui-router-extras": "~0.0.13",
+    "angular": "~1.4.1",
+    "angular-ui-router": "~0.2.15"
+  }
+}

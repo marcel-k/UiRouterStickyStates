@@ -1,0 +1,41 @@
+﻿.content, .sidebar {
+    float:left;
+    width: 50%;
+    height: 100%;
+}
+
+.tabs {
+  list-style: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding: 0 0 2px;
+}
+
+.tabs:before {
+  content: "[";
+}
+
+.tabs:after {
+  content: "]";
+}
+
+.tabs > li {
+  display: inline;
+}
+
+.tabs > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.tabs > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.active {
+    background-color: yellow;
+}
+li {
+    list-style: none;
+}

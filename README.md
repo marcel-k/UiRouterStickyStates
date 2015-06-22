@@ -11,9 +11,13 @@ A Typescript example of using sticky states for the angular-ui-router found in t
 
 The typescript typings are part of the commit so npm install for using tsd manager to get the typescript definition files is optional.
 
+
 serve and
-open the index-tabs-simple.html for a simple example
+open the index-tabs-simple.html for a simple example or
 open the index-tabs-complex.html for a more complex example
+
+[TODO]
+use gulp to serve
 
 
 

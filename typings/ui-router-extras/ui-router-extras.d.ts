@@ -35,6 +35,14 @@ declare module angular.ui.extras {
          * Docs: http://christopherthielen.github.io/ui-router-extras/#/dsr
          */
         deepStateRedirect?: boolean;
+        /*
+         * Function (injectable). Called when a sticky state is navigated away from (inactivated).
+         */
+        onInactivate?: Function;
+        /*
+         * Function (injectable). Called when an inactive sticky state is navigated to (reactivated).
+         */
+        onReactivate?: Function;
     }
 
     interface IPreviousState {

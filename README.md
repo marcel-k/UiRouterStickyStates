@@ -9,7 +9,7 @@ A Typescript example of using sticky states for the angular-ui-router found in t
 - npm install
 - tsd update
 
-The typescript typings are part of the commit so npm install for using tsd manager to get the typescript definition files is optional.
+Uses tsd to get the typescript definitions : http://definitelytyped.org/tsd/
 
 
 serve and

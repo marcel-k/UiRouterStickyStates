@@ -5,7 +5,7 @@
         'ct.ui.router.extras.dsr'];
 
     var simple = angular.module('uiRouterExtrasExample.tabs.simple', uiRouterDeps);
-
+    
     simple.config(['$stateProvider', '$urlRouterProvider', '$stickyStateProvider',
         ($stateProvider: ng.ui.extras.IExtraStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
@@ -15,8 +15,8 @@
         $stickyStateProvider.enableDebug(true);
 
         /*
-            * Define an abstract parent for the tabs.
-            */
+         * Define an abstract parent for the tabs.
+         */
         $stateProvider.state('tabs', {
             abstract: true,
             templateUrl: 'src/tabs-simple/views/tabs.html',
@@ -27,11 +27,11 @@
         });
 
         /*
-            * create the individual tabs and make them sticky
-            */
+         * create the individual tabs and make them sticky
+         */
         $stateProvider.state('details', {
             sticky: true,
-            //deepStateRedirect: true,
+           deepStateRedirect: true,
             parent: 'tabs',
             url: '/details',
             views: {
@@ -40,7 +40,9 @@
                     controllerAs: 'ctrl',
                     templateUrl: 'src/tabs-simple/views/details.html'
                 }
-            }
+            },
+            onInactivate: function(){},
+            onReactivate: function(){}
         });
 
         $stateProvider.state('info', {
@@ -70,8 +72,8 @@
         });
 
         /*
-            * Nested state inside a sticky (detailstab) state. 
-            */
+         * Nested state inside a sticky (detailstab) state. 
+         */
         $stateProvider.state('details.nestedDetails', {
             url: '/nested',
             views: {

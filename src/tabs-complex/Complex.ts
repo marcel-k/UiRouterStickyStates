@@ -19,8 +19,8 @@
         $urlRouterProvider.otherwise('/tabs/1/details');
 
         /*
-            * Define a top abstract state with named views for the application
-            */
+         * Define a top abstract state with named views for the application
+         */
         $stateProvider.state('app', {
             abstract: true,
             views: {
@@ -51,8 +51,9 @@
         });
 
         /*
-            * create the individual tabs and make them sticky
-            */
+         * create the individual tabs and make them sticky.
+         * The id parameter must be added to the tabs states in stead of the parent, else the parent gets reloaded when the id changes.
+         */
         $stateProvider.state('details', {
             sticky: true,
             parent: 'tabs',
@@ -75,7 +76,7 @@
             url: '/:id/info',
             views: {
                 'tabcontent@tabs': {
-                    template: '<div>dit zijn info data dingen</div>'
+                    template: '<div>info data stuff</div>'
                 },
                 'info@tabs': {
                     controller: 'infoController',
@@ -91,7 +92,7 @@
             url: '/:id/settings',
             views: {
                 'tabcontent@tabs': {
-                    template: '<div>dit zijn settings data dingen</div>'
+                    template: '<div>This is settings data stuff</div>'
                 },
                 'settings@tabs': {
                     controller: 'settingsController',

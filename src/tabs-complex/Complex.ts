@@ -11,7 +11,7 @@
     }]);
 
     complex.config(['$stateProvider', '$urlRouterProvider', '$stickyStateProvider',
-        ($stateProvider: ng.ui.extras.IExtraStateProvider,
+        ($stateProvider: ng.ui.extras.IStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
         $stickyStateProvider: ng.ui.extras.IStickyStateProvider) => {
 

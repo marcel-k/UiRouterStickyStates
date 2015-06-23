@@ -7,7 +7,7 @@
     var simple = angular.module('uiRouterExtrasExample.tabs.simple', uiRouterDeps);
     
     simple.config(['$stateProvider', '$urlRouterProvider', '$stickyStateProvider',
-        ($stateProvider: ng.ui.extras.IExtraStateProvider,
+        ($stateProvider: ng.ui.extras.IStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
         $stickyStateProvider: ng.ui.extras.IStickyStateProvider) => {
 
@@ -15,12 +15,12 @@
         $stickyStateProvider.enableDebug(true);
 
         /*
-         * Define an abstract parent for the tabs.
+         * Define an abstract parent for the tabs. It's controller wil only be fired once, no matter the active substate
          */
         $stateProvider.state('tabs', {
             abstract: true,
             templateUrl: 'src/tabs-simple/views/tabs.html',
-            controller: function () {//fired only once, no matter the active substate
+            controller: function () {
                 this.random = Math.floor((Math.random() * 10) + 1);
             },
             controllerAs: 'ctrl'
@@ -86,6 +86,9 @@
         });
     }]);
 
+    /*
+     * Register the tab controllers
+     */
     simple.controller('detailsController', DetailsController);
     simple.controller('settingsController', SettingsController);
     simple.controller('infoController', InfoController);

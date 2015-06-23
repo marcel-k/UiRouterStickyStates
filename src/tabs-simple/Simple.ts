@@ -73,6 +73,8 @@
 
         /*
          * Nested state inside a sticky (detailstab) state. 
+         * Because the parent state is marked deepStateRedirect, 
+         * this state wil be reactivated when parent state is transitioned to directly and this was the most recently active sub-state.
          */
         $stateProvider.state('details.nestedDetails', {
             url: '/nested',

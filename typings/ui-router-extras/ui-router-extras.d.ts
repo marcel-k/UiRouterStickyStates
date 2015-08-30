@@ -130,7 +130,7 @@ declare module angular.ui.extras {
          * The previous state is transitioned to. Transitions use $state.go(fromState, fromParams);
          * @param memoName The state memorized as 'memoName' is transitioned to.
          */
-        go(memoName?: string): void;
+        go(memoName?: string): angular.IPromise<any>;
         /*
          * Remember the previous state using a memoName.
          * @param memoName The previous state is memorized with a memoName

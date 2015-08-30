@@ -1,3 +1,8 @@
 ﻿<div>tabs constructor only fires once: </div>
 <div ng-bind="ctrl.random"></div>
-<h2 ui-view="tabcontent"></h2>
+<div>
+    <ul>
+        <li><a ui-sref-active="active" ui-sref="details({id: 1})">goto details tab for item 1</a></li>
+        <li><a ui-sref-active="active" ui-sref="details({id: 2})">goto details tab for item 2</a></li>
+    </ul>
+</div>

@@ -58,10 +58,7 @@
             sticky: true,
             parent: 'tabs',
             url: '/:id/details',
-            views: {
-                'tabcontent@tabs': {
-                    templateUrl: 'src/tabs-complex/views/contentlist.html'
-                },
+            views: {                
                 'details@tabs': {
                     controller: 'detailsController',
                     controllerAs: 'ctrl',
@@ -74,10 +71,7 @@
             sticky: true,
             parent: 'tabs',
             url: '/:id/info',
-            views: {
-                'tabcontent@tabs': {
-                    template: '<div>info data stuff</div>'
-                },
+            views: {             
                 'info@tabs': {
                     controller: 'infoController',
                     controllerAs: 'ctrl',
@@ -90,10 +84,7 @@
             sticky: true,
             parent: 'tabs',
             url: '/:id/settings',
-            views: {
-                'tabcontent@tabs': {
-                    template: '<div>This is settings data stuff</div>'
-                },
+            views: {               
                 'settings@tabs': {
                     controller: 'settingsController',
                     controllerAs: 'ctrl',
